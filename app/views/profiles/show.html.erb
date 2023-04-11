@@ -1,0 +1,16 @@
+<h1> Show Profile </h1>
+</br>
+
+<table border='2'>
+<tr>
+  <td> Interests</td>
+  <td> Gender </td>
+</tr>
+  <tr>
+    <td> <%= @profile.interest %> </td></br>
+    <td> <%= @profile.gender%> </td></br>
+  </tr>
+  </table>
+
+  <%= link_to 'Edit', edit_profile_path(@profile) %></br>
+  <%= link_to "Delete profile", profile_path(@profile), method: :delete %>

@@ -1,0 +1,16 @@
+<h1> View All Profiles </h1>
+  <table border='2'>
+    <tr>
+      <td> Interests</td>
+      <td> Gender </td>
+    </tr>
+
+    <% @profiles.each do |profile| %>
+      <tr>
+      <td> <%= profile.interests%> </td>
+      <td> <%= profile.gender %> </td>
+      </tr>
+    <% end %>
+</table>
+
+<%= link_to 'New Profile', new_profile_path(@profile) %>
