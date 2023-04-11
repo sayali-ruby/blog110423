@@ -1,1 +1,12 @@
 <h1> Welcome to Sayali's Blog Application </h1>
+
+<% if !@posts.present? %>
+ <p> Sorry there is no Post created yet.</p>
+ <span>Click here <%= link_to 'Create Post', new_post_path %> to create your first Post </span>
+<% else %>
+ <% @posts.each do |post|%>
+    <ul>
+      <li><%= link_to post.title, post_path(post)%></li>
+    </ul>
+  <% end %>
+<% end %>
